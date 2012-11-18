@@ -1,6 +1,6 @@
 /*
- Title:        XbeeMatrixChrono (FireDay Uno 2012)
- Description:  Makes a chronometer out of the XbeeMatrix project for
+ Title:        XbeeMatrixTimer (FireDay Uno 2012)
+ Description:  Makes a timer out of the XbeeMatrix project for
                Robopoly contests.
  Author:       Karl Kangur <karl.kangur@gmail.com>
  Date:         2012-11-16
@@ -187,7 +187,7 @@ int main()  // flow chart from page 17 of datasheet
   OCR1A = 1250 - 1;
   //TIMSK1 |= (1 << OCIE1A);
   
-  initChrono();
+  initTimer();
   asm("SEI");
   
   while(1);
@@ -237,7 +237,7 @@ ISR(INT2_vect)
   {
     TIMSK1 &= ~(1 << OCIE1A);
     counting = 0;
-    initChrono();
+    initTimer();
   }
 }
 
@@ -288,11 +288,11 @@ ISR(TIMER1_COMPA_vect)
   }
   else
   {
-    initChrono();
+    initTimer();
   }
 }
 
-void initChrono()
+void initTimer()
 {
   myTime.minutes = 0;
   myTime.seconds = 0;

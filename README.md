@@ -1,8 +1,8 @@
-# XbeeMatrixChrono
+# XbeeMatrixTimer
 
-![XbeeMatrixChrono](http://i.imgur.com/NP3hB.png)
+![XbeeMatrixTimer](http://i.imgur.com/NP3hB.png)
 
-## Chronometer for events
+## Timer for events
 This code is to be used with the XbeeMatrix project and the arch during events. The arch sends the start trigger and the timer starts to count up to 1 minute and 30 seconds after which it stops. The timer stops when one of the bumbers is hit. It is reset when the arch is reset.
 
 **NOTE: The chip is an ATmega164P on a PRisme2 board!**
@@ -16,7 +16,7 @@ Additionnaly to know which side won a crown is shown on the winner side (left or
 
 Connect pins as follows:
 
-    XMC   | Arch | Bumper 1 | Bumper 2
+    XMT   | Arch | Bumper 1 | Bumper 2
     ------+------+----------+---------
     PB2   | PC0  |          |
     PD2   |      | x        |
